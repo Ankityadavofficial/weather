@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 50px 50px 100px 20px rgba(255, 255, 255, 0.5);
+}
+
+.cloud:nth-child(1) {
+    width: 200px;
+    height: 60px;
+    top: 20%;
+    left: -200px;
+    animation: cloudAnimation 30s linear infinite;
+}
+
+.cloud:nth-child(2) {
+    width: 250px;
+    height: 70px;
+    top: 40%;
+    left: -250px;
+    animation: cloudAnimation 35s linear infinite;
+}
+
+.cloud:nth-child(3) {
+    width: 180px;
+    height: 50px;
+    top: 60%;
+    left: -180px;
+    animation: cloudAnimation 25s linear infinite;
+}
+
+@keyframes cloudAnimation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(110vw); }
+}
